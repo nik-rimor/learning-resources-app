@@ -1,29 +1,36 @@
 <template>
   <ul>
-    <li v-for="resource in storedResources" :key="resource.id">
-      <h2>{{ resource.title }}</h2>
-      <p>{{ resource.description }}</p>
-    </li>
+    <learning-resource
+      v-for="resource in storedResources"
+      :key="resource.id"
+      v-bind="resource"
+    >
+    </learning-resource>
   </ul>
 </template>
 
 <script>
+import LearningResource from './components/learning-resources/LearningResource.vue';
+
 export default {
-  name: "App",
+  name: 'App',
+  components: {
+    LearningResource,
+  },
   data() {
     return {
       storedResources: [
         {
-          id: "official-guide",
-          title: "Official Guide",
-          description: "The Official Vue.js documentation.",
-          link: "https://vuejs.org",
+          id: 'official-guide',
+          title: 'Official Guide',
+          description: 'The Official Vue.js documentation.',
+          link: 'https://vuejs.org',
         },
         {
-          id: "google",
-          title: "Google",
-          description: "Learn to google...",
-          link: "https://google.org",
+          id: 'google',
+          title: 'Google',
+          description: 'Learn to google...',
+          link: 'https://google.org',
         },
       ],
     };
