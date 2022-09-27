@@ -1,5 +1,5 @@
 # learning-resources-app
-A basic app using Vue3 functionalities such as router, api calls, authentication, vuex etc. 
+A basic app using Vue3 with functionalities such as router, api calls, authentication, vuex etc. 
 
 ## Project setup
 ```
