@@ -13,7 +13,7 @@ import LearningResource from './LearningResource.vue';
 
 export default {
   name: 'StoredResources',
-  props: ['resources'],
+  inject: ['resources'],
   components: {
     LearningResource,
   },
